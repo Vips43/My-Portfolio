@@ -1,9 +1,15 @@
 :root {
   --max-width: 1200px;
 }
-
+body {
+  overflow: scroll;
+}
+.body {
+  overflow-y: scroll;
+}
 nav {
   height: 70px;
+  position: fixed;
   /* display: flex; */
 }
 
@@ -83,6 +89,17 @@ ul li a:hover {
 .hire-me {
   background-color: rgb(142, 3, 177);
   color: white;
+  position: relative;
+  z-index: 0;
+  span {
+    position: absolute;
+    width: 400px;
+    background-color: #171e5a;
+    padding: 1rem 2rem;
+    top: 100px;
+    right: -150px;
+    transition: all 0.2s;
+  }
 }
 .hire-me:hover {
   background-color: rgb(95, 0, 119);
@@ -126,31 +143,31 @@ ul li a:hover {
   border-radius: 10px;
   display: flex;
   overflow: hidden;
-  transition: transform 0.2s ease-in;
   img {
     width: 50%;
+    transition: transform 0.1s ease-in;
   }
   span {
-    transform: translateX(200px);
+    transform: translateX(20px);
     padding: 3rem 0 0 1rem;
     transition: transform 0.2s ease-in;
   }
 }
-.skills-container .skills .skill:hover img{
+.skills-container .skills .skill:hover img {
   transform: scale(1.1);
 }
-.skills-container .skills .skill:hover span{
-    transform: translateX(0px);
+.skills-container .skills .skill:hover span {
+  transform: translateX(0px);
 }
-
-
-
 
 .sec2 {
   height: 400px;
 }
 
 @media (width < 750px) {
+    nav{
+        z-index: 99;
+    }
   ul {
     position: absolute;
     width: 100%;
@@ -182,22 +199,28 @@ ul li a:hover {
   .skills-container .skills .skill {
     display: flex;
     flex-direction: column;
-    border: none;
     img {
       width: 100%;
-      transition: transform .5s;
+      transition: transform 0.5s;
     }
     span {
       text-align: center;
       font-weight: 600;
-      padding: 1rem 0;
+      padding: 1rem 0 0 0;
       transform: translateY(200px);
-      transition: transform .5s;
+      transition: transform 0.5s;
     }
   }
-  .skills-container .skills .skill:hover span{
-    transform: translateY(0px);
+
+  .skills-container .skills .skill:hover {
+    border: 1px solid #b1b1b1;
+    padding: .5rem;
+    
 }
+  .skills-container .skills .skill:hover span {
+    transform: translateY(0px);
+    text-align: center;
+  }
 }
 
 @keyframes tilt {
