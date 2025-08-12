@@ -176,9 +176,8 @@ nav {
   width: 90%;
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  gap: auto;
   border: 1px solid black;
 }
 .about-img {
@@ -444,6 +443,21 @@ nav {
   transform: translateX(100%);
 }
 /*Number section ends */
+/*copyright starts*/
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/*copyright ends*/
 
 @media (width < 750px) {
   nav {
