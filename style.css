@@ -6,6 +6,7 @@
 }
 body {
   overflow: scroll;
+  width: 100%;
 }
 .body {
   overflow-y: scroll;
@@ -30,7 +31,7 @@ nav {
 }
 .section {
   background-color: var(--color);
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 .section-container {
   min-height: 100vh;
@@ -128,7 +129,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8rem 1rem;
+  padding: 3rem 1rem;
 }
 .skills-container h2 {
   font-size: 2rem;
@@ -141,7 +142,6 @@ nav {
 }
 .skills-container .skills {
   width: 100%;
-  padding: 2rem 0;
   display: grid;
   place-items: center;
   grid-template-columns: repeat(5, 1fr);
@@ -172,22 +172,31 @@ nav {
 .sec2 {
   height: 400px;
 }
-.about-img > img {
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  border-bottom: 5px solid rgb(117, 117, 117);
-  border-top: 5px solid rgb(116, 116, 116);
-}
-
 .about-me-container {
   width: 90%;
   padding: 1rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: auto;
+  border: 1px solid black;
+}
+.about-img{
+  width: 300px;
+  height: 300px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
 }
+.about-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  flex-shrink: 0;
+  flex-basis: 0;
+}
+
+
 
 /* about- me  design with effects*/
 .about-us {
@@ -196,6 +205,7 @@ nav {
 }
 .about {
   width: 250px;
+  flex-grow: 1;
   height: 100px;
   border: 1px solid black;
   border-radius: 10px;
@@ -234,14 +244,11 @@ nav {
   transform: translateY(0);
 }
 
-.about-me-section .projects {
-  height: 1000px;
-}
-
 /* projects section design*/
 
 .projects {
   width: 100%;
+  height: 500px;
   display: flex;
   flex-direction: column;
   z-index: 0;
@@ -359,6 +366,74 @@ nav {
   padding: 0.5rem 1rem;
   border-radius: 10px;
 }
+.contacts-me{
+  margin-top: 3rem;
+  padding: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts-me p{
+  font-size: 10px;
+  font-weight: 500;
+  color: #57564f;
+}
+.contacts-me > h2{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.contact-me{
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  border: 2px solid grey;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+}
+.contacts-me .number{
+  border: 1px solid black;
+  padding: .8rem 1.4rem;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.contacts-me .number::before{
+  content: 'Phone';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000000;
+  color: white;
+  display: grid;
+  place-items: center;
+  transition: transform .2s ease;
+}
+.contacts-me .number::after{
+  content: 'Number';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: #000000;
+  color: white;
+  display: grid;
+  place-items: center;
+  transition: transform .2s ease;
+}
+.contacts-me .number:hover::before{
+  transform: translateX(-100%);
+}
+.contacts-me .number:hover::after{
+  transform: translateX(100%);
+}
+
+
 
 @media (width < 750px) {
   nav {
@@ -418,9 +493,7 @@ nav {
     text-align: center;
     flex-grow: 1;
   }
-  .about-us {
-    width: 100%;
-  }
+
   .about-me-section {
     img {
       width: 200px;
@@ -431,7 +504,13 @@ nav {
   .about-me-container {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
+  }
+  .about-us {
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid black;
   }
   .projects-ul {
     padding: 1rem;
@@ -459,6 +538,7 @@ nav {
     transition: all 0.5s;
   }
 }
+
 
 @keyframes tilt {
   0% {
