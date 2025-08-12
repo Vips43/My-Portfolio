@@ -11,7 +11,7 @@ body {
   overflow-y: scroll;
 }
 nav {
-  height: 90px;
+  height: 85px;
   position: fixed;
   z-index: 999;
 }
@@ -373,7 +373,8 @@ nav {
     top: 85px;
     background-color: #b4b4b4;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     gap: 3rem;
   }
   nav #check:checked ~ .ul {
