@@ -205,7 +205,6 @@ justify-content: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* gap: 5px; */
     background-color: black;
     color: aliceblue;
     overflow: hidden;
@@ -213,13 +212,12 @@ justify-content: center;
 .about i{
     display: block;
     padding: .3rem 0;
-    /* transform: translateY(130%); */
     color: white;
     font-size: 1.5rem;
     transition: all .5s;
 }
 .about > *{
-    transform: translateY(40px);
+    transform: translateY(35px);
     margin: 0;
     padding: 0;
     color: black;
