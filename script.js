@@ -1,10 +1,11 @@
 let hireMeBtn = document.querySelector('.hire-me')
+let alertMsg = document.querySelector('.alert-msg')
 
 hireMeBtn.addEventListener('click',()=>{
-    let span = document.createElement('span')
-    span.textContent = `Sent massage to VIPUL GEHLOT Thanks for Giving Opportunity`
-    hireMeBtn.appendChild(span)
+    alertMsg.style.opacity = '1'
     setTimeout(() => {
-        span.remove()
+        alertMsg.style.opacity = '0'
     }, 2000);
+
+    
 })

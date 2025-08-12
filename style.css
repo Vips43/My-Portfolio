@@ -1,5 +1,8 @@
 :root {
   --max-width: 1200px;
+  --bg-color: #000000;
+  --color: #F6EFD2;
+  --dec-color: #57564F;
 }
 body {
   overflow: scroll;
@@ -8,7 +11,7 @@ body {
   overflow-y: scroll;
 }
 nav {
-  height: 70px;
+  height: 90px;
   position: fixed;
   /* display: flex; */
 }
@@ -19,14 +22,15 @@ ul {
 ul li a {
   border: 2px solid transparent;
   transition: 0.3s;
+
 }
 ul li a:hover {
-  border-top-color: #cc7410;
-  border-bottom-color: #cc7410;
-  color: #cc7410;
+  border-top-color: var(--bg-color);
+  border-bottom-color: var(--bg-color);
+  color: var(--dec-color);
 }
 .section {
-  background-color: #b4b4b4;
+  background-color: var(--color);
 }
 .section-container {
   min-height: 100vh;
@@ -44,7 +48,7 @@ ul li a:hover {
 }
 .subtitle {
   letter-spacing: 2px;
-  color: whitesmoke;
+  color: var(--color);
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -53,14 +57,14 @@ ul li a:hover {
 }
 .description {
   line-height: 1.5rem;
-  color: #303030;
+  color: var(--dec-color);
   margin-bottom: 2rem;
 }
 .title {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 3rem;
-  color: rgb(22, 22, 22);
+  color: var(--bg-color);
   margin-bottom: 1rem;
 }
 .image {
@@ -81,36 +85,42 @@ ul li a:hover {
   letter-spacing: 2px;
   padding: 1rem 2rem;
   outline: none;
-  border: 2px solid rgb(142, 3, 177);
+  border: 2px solid var(--bg-color);
   border-radius: 10px;
   transition: 0.3s;
   cursor: pointer;
 }
 .hire-me {
-  background-color: rgb(142, 3, 177);
-  color: white;
-  position: relative;
-  z-index: 0;
-  span {
-    position: absolute;
-    width: 400px;
-    background-color: #171e5a;
-    padding: 1rem 2rem;
-    top: 100px;
-    right: -150px;
-    transition: all 0.2s;
-  }
+  background-color: var(--bg-color);
+  color: white;  
 }
+
+
+/*  alert box */
+.alert-msg {
+    position: fixed;
+    width: 400px;
+    background-color: #171e5acc;
+    padding: 1rem 2rem;
+    top: 400px;
+    left: 100px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+/*  alert box */
+
+
 .hire-me:hover {
-  background-color: rgb(95, 0, 119);
-  color: white;
+  background-color: var(--color);
+  color: var(--bg-color);
 }
 .portfolio {
-  color: rgb(142, 3, 177);
+  color: var(--bg-color);
 }
 .portfolio:hover {
-  color: white;
-  background-color: rgb(95, 0, 119);
+  color: var(--color);
+  background-color: var(--bg-color);
 }
 
 /* skills section */
@@ -139,10 +149,11 @@ ul li a:hover {
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
-.skills-container .skills .skill {
+.skills-container .skills .skill{
   border-radius: 10px;
   display: flex;
   overflow: hidden;
+  padding: .5rem;
   img {
     width: 50%;
     transition: transform 0.1s ease-in;
@@ -171,6 +182,7 @@ ul li a:hover {
   ul {
     position: absolute;
     width: 100%;
+    padding-top: 3rem;
     height: calc(100vh - 85px);
     left: -100%;
     top: 85px;
@@ -213,9 +225,7 @@ ul li a:hover {
   }
 
   .skills-container .skills .skill:hover {
-    border: 1px solid #b1b1b1;
-    padding: .5rem;
-    
+    border: 1px solid #b1b1b1;    
 }
   .skills-container .skills .skill:hover span {
     transform: translateY(0px);
