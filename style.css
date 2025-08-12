@@ -181,7 +181,7 @@ nav {
   gap: auto;
   border: 1px solid black;
 }
-.about-img{
+.about-img {
   width: 300px;
   height: 300px;
   display: flex;
@@ -195,8 +195,6 @@ nav {
   flex-shrink: 0;
   flex-basis: 0;
 }
-
-
 
 /* about- me  design with effects*/
 .about-us {
@@ -271,14 +269,14 @@ nav {
 }
 
 .projects-ul {
-      padding: 1rem;
-    border: none;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-    width: 80%;
+  padding: 1rem;
+  border: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 80%;
 }
 
 .project-li {
@@ -349,7 +347,6 @@ nav {
 
 /* projects section design ends*/
 
-
 .button {
   display: flex;
   gap: 10px;
@@ -362,7 +359,7 @@ nav {
   padding: 0.5rem 1rem;
   border-radius: 10px;
 }
-.contacts-me{
+.contacts-me {
   margin-top: 3rem;
   padding: 3rem;
   width: 100%;
@@ -370,34 +367,34 @@ nav {
   flex-direction: column;
   align-items: center;
 }
-.contacts-me p{
+.contacts-me p {
   font-size: 10px;
   font-weight: 500;
   color: #57564f;
 }
-.contacts-me > h2{
+.contacts-me > h2 {
   font-size: 2rem;
   font-weight: 600;
 }
-.contact-me{
+.contact-me {
   margin: 2rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   border: 2px solid grey;
   padding: 1rem 1.5rem;
   border-radius: 30px;
 }
-.contacts-me .number{
+.contacts-me .number {
   border: 1px solid black;
-  padding: .8rem 1.4rem;
+  padding: 0.8rem 1.4rem;
   border-radius: 15px;
   position: relative;
   overflow: hidden;
 }
-.contacts-me .number::before{
-  content: 'Phone';
+.contacts-me .number::before {
+  content: "Phone";
   position: absolute;
   width: 50%;
   height: 100%;
@@ -407,10 +404,10 @@ nav {
   color: white;
   display: grid;
   place-items: center;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
 }
-.contacts-me .number::after{
-  content: 'Number';
+.contacts-me .number::after {
+  content: "Number";
   position: absolute;
   width: 50%;
   height: 100%;
@@ -420,16 +417,14 @@ nav {
   color: white;
   display: grid;
   place-items: center;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
 }
-.contacts-me .number:hover::before{
+.contacts-me .number:hover::before {
   transform: translateX(-100%);
 }
-.contacts-me .number:hover::after{
+.contacts-me .number:hover::after {
   transform: translateX(100%);
 }
-
-
 
 @media (width < 750px) {
   nav {
@@ -534,7 +529,6 @@ nav {
     transition: all 0.5s;
   }
 }
-
 
 @keyframes tilt {
   0% {
