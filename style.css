@@ -503,31 +503,39 @@ nav {
     justify-content: space-between;
     border: 1px solid black;
   }
-  .projects-ul {
-    padding: 1rem;
-    list-style-type: none;
-    display: flex;
+   .projects-ul {
     flex-direction: column;
-    gap: 10px;
-    position: relative;
+    align-items: center;
+    gap: 1rem;
   }
-  .project-li::before {
-    content: "Info about Project  \2192";
+
+  .project-li {
+    width: 90%; /* full width on mobile */
+    max-width: 350px;
   }
-  .child-ul {
-    width: 300px;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: absolute;
-    background-color: black;
-    list-style: none;
-    right: -300px;
-    top: -1px;
-    z-index: 10;
-    transition: all 0.5s;
+
+  .projects h1 {
+    font-size: 1.5rem;
   }
+
+  .child-ul .img img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects h1 {
+    font-size: 1.2rem;
+  }
+
+  .projects p {
+    font-size: 9px;
+  }
+
+  .child-ul .img img {
+    width: 70%;
+  }
+  
 }
 
 @keyframes tilt {
