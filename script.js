@@ -1,5 +1,6 @@
 let hireMeBtn = document.querySelector('.hire-me')
 let alertMsg = document.querySelector('.alert-msg')
+let about = document.querySelector('.about')
 
 hireMeBtn.addEventListener('click',()=>{
     alertMsg.style.opacity = '1'
@@ -9,3 +10,6 @@ hireMeBtn.addEventListener('click',()=>{
 
     
 })
+
+// design about-us section
+

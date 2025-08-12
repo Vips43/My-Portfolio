@@ -1,8 +1,8 @@
 :root {
   --max-width: 1200px;
   --bg-color: #000000;
-  --color: #F6EFD2;
-  --dec-color: #57564F;
+  --color: #f6efd2;
+  --dec-color: #57564f;
 }
 body {
   overflow: scroll;
@@ -22,7 +22,6 @@ ul {
 ul li a {
   border: 2px solid transparent;
   transition: 0.3s;
-
 }
 ul li a:hover {
   border-top-color: var(--bg-color);
@@ -92,24 +91,22 @@ ul li a:hover {
 }
 .hire-me {
   background-color: var(--bg-color);
-  color: white;  
+  color: white;
 }
-
 
 /*  alert box */
 .alert-msg {
-    position: fixed;
-    width: 400px;
-    background-color: #171e5acc;
-    padding: 1rem 2rem;
-    top: 400px;
-    left: 100px;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
+  position: fixed;
+  width: 400px;
+  background-color: #171e5acc;
+  padding: 1rem 2rem;
+  top: 400px;
+  left: 100px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
 
 /*  alert box */
-
 
 .hire-me:hover {
   background-color: var(--color);
@@ -149,11 +146,11 @@ ul li a:hover {
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
-.skills-container .skills .skill{
+.skills-container .skills .skill {
   border-radius: 10px;
   display: flex;
   overflow: hidden;
-  padding: .5rem;
+  padding: 0.5rem;
   img {
     width: 50%;
     transition: transform 0.1s ease-in;
@@ -174,11 +171,82 @@ ul li a:hover {
 .sec2 {
   height: 400px;
 }
+.about-me-section {
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border-bottom: 5px solid rgb(117, 117, 117);
+    border-top: 5px solid rgb(116, 116, 116);
+  }
+}
+.about-me-container {
+  width: 90%;
+  padding: 1rem;
+  display: flex;
+justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+/* about- me  design with effects*/
+.about-us{
+    display: flex;
+    gap: 1rem;
+
+}
+.about{
+    width: 250px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 5px; */
+    background-color: black;
+    color: aliceblue;
+    overflow: hidden;
+}
+.about i{
+    display: block;
+    padding: .3rem 0;
+    /* transform: translateY(130%); */
+    color: white;
+    font-size: 1.5rem;
+    transition: all .5s;
+}
+.about > *{
+    transform: translateY(40px);
+    margin: 0;
+    padding: 0;
+    color: black;
+    transition: all .5s;
+}
+.about:hover{
+    background-color: white;
+    color: black;
+}
+.about:hover h3,.about:hover span,.about:hover i{
+    color: black;
+    transform: translateY(0);
+}
+
+.about-me-section .projects{
+  height: 1000px;
+}
+
+
+
+
+
 
 @media (width < 750px) {
-    nav{
-        z-index: 99;
-    }
+  nav {
+    z-index: 99;
+  }
   ul {
     position: absolute;
     width: 100%;
@@ -225,18 +293,24 @@ ul li a:hover {
   }
 
   .skills-container .skills .skill:hover {
-    border: 1px solid #b1b1b1;    
-}
+    border: 1px solid #b1b1b1;
+  }
   .skills-container .skills .skill:hover span {
     transform: translateY(0px);
     text-align: center;
+    flex-grow: 1;
   }
-}
-.About-me-section{
-  img{
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
+  .about-me-section {
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+    }
+  }
+  .about-me-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 }
 
