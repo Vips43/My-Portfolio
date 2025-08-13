@@ -512,7 +512,6 @@ nav {
     height: 200px;
     display: flex;
     flex-direction: column;
-    border: 1px solid ;
   }
 
   .skills-container .skills .skill img {
