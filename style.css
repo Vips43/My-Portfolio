@@ -105,6 +105,19 @@ nav {
   background-color: var(--bg-color);
   color: white;
 }
+.socials{
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.socials .social a:hover{
+  background-color: white;
+  color: #000;
+}
+
 
 /*  alert box */
 .alert-msg {
@@ -560,7 +573,7 @@ nav {
   }
 
   /*skills container starts*/
-  
+
   .skills-container {
     padding: 2rem 0.5rem;
   }
