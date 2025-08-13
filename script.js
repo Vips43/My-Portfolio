@@ -24,21 +24,21 @@ hireMeBtn.addEventListener('click',()=>{
 //     color:"grey",
 //     duration:2,
 // })
-gsap.from('.skills-container .skills', {
-    scale: 0,
-    opacity:0,
-    y: -30,
-    delay: .5,
-    markers: true,
-    start: 'top 55%',
-    end: 'top 40%',
-    duration: 1,
-    scrollTrigger: {
-        trigger: '.skills-container .skills',
-        scroller: 'body',
-        start: 'top 55%',
-        end: 'top 40%',
-        scrub: 2,
-        pin:true
-    }
-})
+// gsap.from('.skills-container .skills', {
+//     scale: 0,
+//     opacity:0,
+//     y: -30,
+//     delay: .5,
+//     markers: true,
+//     start: 'top 55%',
+//     end: 'top 40%',
+//     duration: 1,
+//     scrollTrigger: {
+//         trigger: '.skills-container .skills',
+//         scroller: 'body',
+//         start: 'top 55%',
+//         end: 'top 40%',
+//         scrub: 2,
+//         pin:true
+//     }
+// })
