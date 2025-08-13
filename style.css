@@ -501,7 +501,14 @@ nav {
   .action-btns {
     margin: auto;
   }
+
+  /*skills container starts*/
+
+  .skills-container{
+    height: 550px;
+  }
   .skills-container .skills .skill {
+    margin-top: 2rem;
     height: 200px;
     display: flex;
     flex-direction: column;
