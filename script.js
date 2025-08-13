@@ -11,6 +11,16 @@ hireMeBtn.addEventListener('click',()=>{
     
 })
 
+// skills section design
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".skills .skill");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("show"); });
+    }, { threshold: 0.1 });
+    cards.forEach(c => io.observe(c));
+  });
+
 // design about-us section
 
 // gsap.from('.subtitle',{
