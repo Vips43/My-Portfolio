@@ -149,10 +149,11 @@ nav {
 
 .skills-container {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 5rem 2rem;
   background: linear-gradient(135deg, #f0f4ff, #e5ecff);
 }
 
@@ -654,6 +655,7 @@ nav {
   .child-ul .img img {
     width: 70%;
   }
+  .
   .skills-container h2 {
     font-size: 1.5rem;
   }

@@ -40,8 +40,8 @@ gsap.from('.skills-container .skills', {
     y: -30,
     delay: .5,
     markers: true,
-    start: 'top 55%',
-    end: 'top 40%',
+    // start: 'top 55%',
+    // end: 'bottom 40px',
     duration: 1,
     scrollTrigger: {
         trigger: '.skills-container .skills',
