@@ -254,6 +254,7 @@ nav {
 
 .about-me-section {
   height: fit-content;
+  padding: 4rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
