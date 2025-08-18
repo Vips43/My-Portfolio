@@ -328,7 +328,7 @@ nav {
   opacity: 0;
 }
 .about:nth-child(1){
-  transform: translateX(-200px);
+  transform: translateX(-100px);
   transition: all 0.4s ease;
 }
 .about:nth-child(1).show{
@@ -336,7 +336,7 @@ nav {
   transform: translateX(0);
 }
 .about:nth-child(2){
-  transform: translateX(200px);
+  transform: translateX(100px);
   transition: all 0.4s ease;
 }
 .about:nth-child(2).show{
