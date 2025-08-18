@@ -204,7 +204,6 @@ nav {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
-
 /* Fallback if backdrop-filter isn’t supported */
 @supports not (
   (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))
