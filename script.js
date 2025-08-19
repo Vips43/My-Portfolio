@@ -27,7 +27,8 @@ const observer = new IntersectionObserver((entries) => {
 
   })
 }, {
-  rootMargin: '-80px'
+  rootMargin: '-80px',
+  threshold: 0
 })
 
 skills.forEach(e => observer.observe(e))
