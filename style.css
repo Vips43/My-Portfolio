@@ -778,6 +778,9 @@ nav {
   .skills-container .skill img {
     width: 70%;
   }
+  .contacts-me{
+    height: 100vh;
+  }
   .contact-me{
     width: 350px;
     font-size: 10px;
