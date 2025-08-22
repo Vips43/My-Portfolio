@@ -34,7 +34,6 @@ skills.forEach(e => observer.observe(e))
 
 const arr = [contactsMeP, contactsMeH2, contactMe, number, aboutImg, about1, about2]
 arr.forEach(e => observer.observe(e))
-console.log(arr);
 
 const projectLi = document.querySelectorAll('.project-li')
 projectLi.forEach(el => observer.observe(el))

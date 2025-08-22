@@ -311,7 +311,8 @@ nav {
 }
 
 .about {
-  width: 250px;
+  /* width: 250px; */
+  max-width: 250px;
   flex-grow: 1;
   height: 100px;
   border-radius: 10px;
@@ -418,18 +419,19 @@ nav {
 }
 
 .projects-ul {
-  padding: 1rem;
-  border: none;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  width: 80%;
+    padding: 1rem;
+    border: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 85%;
 }
 
 .project-li {
-  width: 200px;
+  width: 300px;
   background-color: #fff5f2;
   border-radius: 15px;
   border: 2px solid black;
@@ -727,7 +729,7 @@ nav {
   }
   .about-us {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
   .projects-ul {
     flex-direction: column;
