@@ -1,3 +1,5 @@
+import { projectsData } from "./data.js";
+
 let hireMeBtn = document.querySelector('.hire-me')
 let alertMsg = document.querySelector('.alert-msg')
 hireMeBtn.addEventListener('click', () => {
@@ -38,3 +40,36 @@ arr.forEach(e => observer.observe(e))
 
 const projectLi = document.querySelectorAll('.project-li')
 projectLi.forEach(el => observer.observe(el))
+
+
+// projects section
+
+const projectsUl = document.querySelector('.projects-ul')
+document.addEventListener("DOMContentLoaded", () => {
+  addProjects()
+})
+function addProjects() {
+  projectsData.forEach((data) => {
+    const li = document.createElement('li')
+    li.classList.add('project-li')
+    li.innerHTML = `
+          <span>${data.name} </span>
+          <ul class="child-ul">
+              <li class="child-li">
+                  ${data.desc}
+              </li>
+              <li class="child-li img">
+                  <img src=${data.img} alt="">
+              </li>
+              <li class="child-li button">
+                  <button><a href="${data.github}">Github</a></button>
+                  <button><a href="${data.demo}" target="_blank">Use
+                          Demo</a></button>
+              </li>
+          </ul>
+                `
+    projectsUl.append(li)
+    observer.observe(li)
+
+  })
+}
