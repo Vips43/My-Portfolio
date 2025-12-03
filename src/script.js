@@ -1,4 +1,5 @@
-import { projectsData } from "./data.js";  // FIXED PATH
+import { projectsData } from "./data.js";
+
 
 // MOBILE MENU
 const mobileBtn = document.getElementById("mobileBtn");
@@ -16,10 +17,12 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-      }
+      }else entry.target.classList.remove("show");
+      
     });
   },
-  { threshold: 0.12 }
+  { rootMargin:"-80px",
+    threshold: 0.12 }
 );
 
 document.querySelectorAll("[data-reveal]").forEach((el) => {
@@ -59,15 +62,14 @@ function addProjects() {
           <a href="${data.github}" target="_blank">GitHub</a>
         </button>
 
-        ${
-          data.demo !== "not available"
-            ? `<button class="px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition">
+        ${data.demo !== "not available"
+        ? `<button class="px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition">
                  <a href="${data.demo}" target="_blank">Live Demo</a>
                </button>`
-            : `<button disabled class="px-3 py-1 bg-gray-300 border border-black rounded cursor-not-allowed text-gray-600">
+        : `<button disabled class="px-3 py-1 bg-gray-300 border border-black rounded cursor-not-allowed text-gray-600">
                  No Demo
                </button>`
-        }
+      }
       </li>
 
     </ul>
@@ -79,3 +81,46 @@ function addProjects() {
     observer.observe(li);
   });
 }
+
+
+
+// contact me 
+
+const form = document.getElementById('contact_form')
+let name = document.getElementById('name'),
+  email = document.getElementById('email'),
+  msg = document.getElementById('msg')
+
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (!name.value&&!email.value&&!msg.value) {
+    return alert('please fill form')
+  }
+  window.emailjs
+    .sendForm("service_15zdcxt", "template_gu5wagn", form)
+    .then(() => {
+      alert("Email sent successfully!");
+      form.reset();
+    })
+    .catch((error) => {
+      alert("Failed: " + error);
+    });
+});
+
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();    
+    
+//     emailjs.sendForm("service_15zdcxt","template_gu5wagn",{
+//     title: "contact me",
+//     name: name.value.trim(),
+//     time: new Date().toLocaleString(),
+//     email: email.value.trim(),
+//     message: msg.value.trim(),
+//     }).then((res)=>{console.log('Success!', res.status, res.text)},
+//     (err)=>{
+//         console.log("failed...", err)    
+//       }
+//   )
+//   })
