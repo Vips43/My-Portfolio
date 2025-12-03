@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
-    
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "dependencies": {
     "tailwindcss": "^4.1.11"
