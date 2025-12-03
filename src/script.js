@@ -11,6 +11,7 @@ if (mobileBtn) {
   });
 }
 
+
 // INTERSECTION OBSERVER
 const observer = new IntersectionObserver(
   (entries) => {
@@ -38,12 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function addProjects() {
-  console.log("Adding projects…");
 
   projectsData.forEach((data) => {
     const li = document.createElement("li");
     li.className =
-      "project-li max-w-1/2 bg-white border border-black rounded-xl p-4 text-black transition-all";
+      "project-li reveal max-w-1/2 bg-white border border-black rounded-xl p-4 text-black transition-all";
 
     li.innerHTML = `
   <span class="block text-center font-bold mb-2">${data.name}</span>
@@ -108,19 +108,3 @@ form.addEventListener("submit", function (e) {
     });
 });
 
-
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();    
-    
-//     emailjs.sendForm("service_15zdcxt","template_gu5wagn",{
-//     title: "contact me",
-//     name: name.value.trim(),
-//     time: new Date().toLocaleString(),
-//     email: email.value.trim(),
-//     message: msg.value.trim(),
-//     }).then((res)=>{console.log('Success!', res.status, res.text)},
-//     (err)=>{
-//         console.log("failed...", err)    
-//       }
-//   )
-//   })

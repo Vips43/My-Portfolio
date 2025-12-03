@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Vipul Gehlot — Portfolio (Tailwind)</title>
     <script src="https://kit.fontawesome.com/6c461937ec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dist/output.css" />
 </head>
 
@@ -65,15 +66,15 @@
                     class="bg-brandCard border-4 border-orange-100 rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 overflow-visible">
                     <!-- TEXT -->
                     <div class="flex-1 text-center md:text-left reveal" data-reveal>
-                        <p class="uppercase tracking-wide text-sm font-extrabold text-black">Hello</p>
+                        <p class="uppercase tracking-wide text-sm font-extrabold text-black">Hello!</p>
                         <h1 class="mt-2 text-3xl md:text-5xl font-semibold text-brandDark leading-tight">
                             I'm <span class="block text-accent font-bold">VIPUL GEHLOT</span>
                         </h1>
-                        <p class="mt-4 text-2xl md:text-3xl font-semibold">Web<br />Developer</p>
+                        <p class="mt-4 text-2xl md:text-3xl font-semibold text-yellow-700">Web Developer</p>
 
                         <p class="mt-6 text-neutralDec max-w-lg">Welcome to my portfolio — I'm a web developer building
                             accessible and responsive experiences. I work with HTML, CSS, Tailwind, JavaScript and
-                            React.</p>
+                            React.JS. </p>
 
                         <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start *:transition">
                             <a href="#contact"
@@ -204,82 +205,96 @@
 
         <!-- CONTACT -->
         <section id="contact" class="py-20 min-h-screen flex items-center bg-white">
-            <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="max-w-6xl mx-auto px-4 md:px-6 w-full">
 
                 <!-- Heading -->
-                <p class="text-sm text-gray-500">Get in touch</p>
-                <h2 class="text-3xl font-extrabold mt-2">Contact Me</h2>
-
-                <!-- Quick Contact Badges -->
-                <div class="mt-6 flex flex-wrap justify-center gap-3 md:gap-4 text-sm md:text-base">
-
-                    <a href="mailto:vipulgehlot43@gmail.com"
-                        class="contact badge inline-flex items-center gap-2 px-4 py-2 border rounded-full hover:bg-gray-100 transition">
-                        <i class="fa-solid fa-at"></i>
-                        <span>vipulgehlot43@gmail.com</span>
-                    </a>
-
-                    <a href="https://github.com/Vips43" target="_blank"
-                        class="contact badge inline-flex items-center gap-2 px-4 py-2 border rounded-full hover:bg-gray-100 transition">
-                        <span>GitHub</span>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/vipul-gehlot-b06aa0130/" target="_blank"
-                        class="contact badge inline-flex items-center gap-2 px-4 py-2 border rounded-full hover:bg-gray-100 transition">
-                        <span>LinkedIn</span>
-                    </a>
+                <div class="text-center mb-12">
+                    <p class="text-sm text-gray-500">Get in touch</p>
+                    <h2 class="text-3xl font-extrabold mt-2">Contact Me</h2>
                 </div>
 
-                <!-- Phone -->
-                <div class="mt-8">
-                    <div class="inline-block border rounded-2xl px-6 py-2 shadow text-gray-700 font-semibold">
-                        +91 97683 48536
+                <!-- GRID: Left = quick contacts, Right = Form -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+                    <!-- LEFT SIDE -->
+                    <div class="h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-6">
+
+                        <!-- Quick Contact Badges -->
+                        <div id="" class="aTag flex flex-wrap justify-center lg:justify-start gap-3 text-sm md:text-base">
+
+                            <a href="mailto:vipulgehlot43@gmail.com"
+                                class="contact badge inline-flex items-center gap-2 px-4 py-2 border rounded-full hover:bg-gray-100 transition">
+                                <i class="fa-solid fa-at"></i>
+                                <span>vipulgehlot43@gmail.com</span>
+                            </a>
+
+                            <a href="https://github.com/Vips43" target="_blank"
+                                class="contact badge inline-flex items-center gap-2 px-4 py-2 border rounded-full hover:bg-gray-100 transition">
+                                <span>GitHub</span>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/vipul-gehlot-b06aa0130/" target="_blank"
+                                class="contact badge inline-flex items-center gap-2 px-4 py-2 border rounded-full hover:bg-gray-100 transition">
+                                <span>LinkedIn</span>
+                            </a>
+
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <div class="number inline-block border rounded-2xl px-6 py-2 shadow hover:drop-shadow-2xl text-gray-700 font-semibold">
+                                +91 97683 48536
+                            </div>
+                        </div>
+
                     </div>
-                </div>
 
-                <!-- Contact Form -->
-                <form id="contact_form" class="mt-10 p-6 space-y-6 max-w-md mx-auto bg-white shadow-lg rounded-xl">
+                    <!-- RIGHT SIDE: FORM -->
+                    <form id="contact_form" class="p-6 space-y-6 bg-white shadow-lg hover:drop-shadow-md rounded-xl max-w-md mx-auto w-full">
 
-                    <h3 class="font-bold text-lg underline">Form</h3>
+                        <h3 class="font-bold text-lg underline text-center">Form</h3>
 
-                    <!-- Name -->
-                    <div class="text-left">
-                        <label for="name" class="block font-semibold mb-1">Your name:</label>
-                        <input id="name" name="name" type="text"
-                            class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
-                            required>
-                    </div>
+                        <!-- Name -->
+                        <div class="text-left">
+                            <label for="name" class="block font-semibold mb-1">Your name:</label>
+                            <input id="name" name="name" type="text"
+                                class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
+                                required>
+                        </div>
 
-                    <!-- Email -->
-                    <div class="text-left">
-                        <label for="email" class="block font-semibold mb-1">Your email:</label>
-                        <input id="email" name="email" type="email"
-                            class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
-                            required>
-                    </div>
+                        <!-- Email -->
+                        <div class="text-left">
+                            <label for="email" class="block font-semibold mb-1">Your email:</label>
+                            <input id="email" name="email" type="email"
+                                class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
+                                required>
+                        </div>
 
-                    <!-- Message -->
-                    <div class="text-left">
-                        <label for="msg" class="block font-semibold mb-1">Your message:</label>
-                        <textarea id="msg" name="message" rows="4"
-                            class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-orange-400"
-                            required></textarea>
-                    </div>
+                        <!-- Message -->
+                        <div class="text-left">
+                            <label for="msg" class="block font-semibold mb-1">Your message:</label>
+                            <textarea id="msg" name="message" rows="4"
+                                class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-orange-400"
+                                required></textarea>
+                        </div>
 
-                    <!-- Submit Button -->
-                    <button type="submit" class="mx-auto block px-6 py-2 bg-white rounded-xl shadow-md 
+                        <!-- Submit Button -->
+                        <button type="submit" class="mx-auto block px-6 py-2 bg-white rounded-xl shadow-md 
                    text-gray-800 font-semibold 
                    transition-all duration-200 
                    hover:shadow-xl hover:-translate-y-0.5
                    active:translate-y-0.5 active:shadow-inner
                    focus:outline-none focus:ring-2 focus:ring-orange-400">
-                        Submit
-                    </button>
+                            Submit
+                        </button>
 
-                </form>
+                    </form>
+
+                </div>
 
             </div>
         </section>
+
 
 
         <!-- FOOTER -->
