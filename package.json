@@ -1,12 +1,12 @@
 {
-  "name": "portfolio-tailwind",
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
-  },
-  "dependencies": {
-    "tailwindcss": "^4.1.11"
-  }
+ "name": "portfolio-tailwind",
+ "version": "1.0.0",
+ "type": "module",
+ "scripts": {
+  "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+  "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css"
+ },
+ "dependencies": {
+  "tailwindcss": "^4.1.11"
+ }
 }
