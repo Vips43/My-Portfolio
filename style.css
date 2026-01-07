@@ -39,12 +39,12 @@ html,body{
   height: 100%;
   background: #000;
   inset: 0;
+  transition: all .2s ease-in-out;
   border-radius: 6px;
 }
 .before{
   overflow: hidden;
 }
 .before:hover::before{
-  transition: all .2s linear;
   transform: translateY(-100%);
 }
