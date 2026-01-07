@@ -20,13 +20,20 @@ export const projectsData = [
         github:"https://github.com/Vips43/E-commerce.git",
         demo:"not available",
     },
-    // {
-    //     name:,
-    //     desc:,
-    //     img:,
-    //     github:,
-    //     demo:,
-    // },
+    {
+        name: "E-Store",
+        desc: "e-commerce website using build on ReactJS, used dummyjson api to fetch users and products. Used routed to protect user page and product details page only admin can access the users page and if logged in then acccess details page. Used Zustand for state management",
+        img: "images/e-store.png",
+        github: "https://github.com/Vips43/E-Store.git",
+        demo: "https://e-store-seven-topaz.vercel.app/"
+    },
+    {
+        name: "spotify-onReactJS",
+        desc: "Spotify clone built using, ReactJS and used spotify api for data fetching. for UI used tailwindCSS, a better performance and user freindly UI, with mobile freindly resposiveness",
+        img: "images/spotify.png",
+        github: "https://github.com/Vips43/spotify-onReactJS.git",
+        demo: "https://spotify-on-react-js.vercel.app/"
+    },
     {
         name: "Qr Generator",
         desc: "A simple QR Code Generator built with HTML, CSS, and JavaScript that lets you instantly                            create QR codes for any text or link. Just enter your data, generate, and share!",

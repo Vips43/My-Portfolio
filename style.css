@@ -28,3 +28,23 @@ html,body{
   height: 200px;
   transition: all .3s ease;
 }
+
+.hello{
+  @apply hover:bg-amber-300 
+}
+.before::before{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 100%;
+  background: #000;
+  inset: 0;
+  border-radius: 6px;
+}
+.before{
+  overflow: hidden;
+}
+.before:hover::before{
+  transition: all .2s linear;
+  transform: translateY(-100%);
+}
