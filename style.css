@@ -7,10 +7,18 @@ main {
  height: calc(100vh - 40px);
  overflow-y: scroll;
 }
+.section {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
 
 section {
  scroll-snap-align: start;
  min-height: calc(100vh - 40px);
+}
+footer{
+  scroll-snap-align: start;
 }
 
 .expand-wrapper {
