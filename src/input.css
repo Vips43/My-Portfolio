@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "@toolwind/corner-shape";
 
+@source "/script.js";
+@source "/data.js";
+
 .before_online_ping{
   @apply hover:before:absolute before:-top-3 before:-right-3 before:animate-ping before:w-3 before:h-3 before:bg-green-600 before:rounded-full;
 }

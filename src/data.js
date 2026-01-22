@@ -3,7 +3,8 @@ export const projectsData = [
         name: "Weather App",
         desc: "Displays live weather data for cities worldwide using a JavaScript API with dynamic GIF backgrounds and CSS animations.",
         img: "images/projects/weather-ss.png",
-        bgColor:"#30364F",
+        bgColor:"#574964",
+        shape:"hover:corner-bevel",
         github: "https://github.com/Vips43/weather-forcast",
         demo: "https://weather-forcast-five-gamma.vercel.app/",
         tech: ["OpenWeather API", "HTML", "CSS", "TailwindCSS", "JavaScript"],
@@ -13,6 +14,7 @@ export const projectsData = [
         desc: "A React-based movie discovery platform using the TMDB API. Features country-based streaming availability, multi-select watch providers, sorting, and global state management with Zustand.",
         img: "images/projects/TMDB.png", 
         bgColor:"#30364F",
+        shape:"hover:corner-bevel",
         github: "https://github.com/Vips43/TMDB_clone.git", 
         demo: "https://tmdb-clone-eight.vercel.app/",
         tech: [ "ReactJS", "TMDB API", "Zustand", "TailwindCSS", "Material UI", "API Integration", ],
@@ -82,10 +84,10 @@ export const projectsData = [
 
 
 export const skillData = [
-    { name: "HTML", skill: "Experienced", img: "./images/skills/html5-logo.png", shape:"", },
-    { name: "CSS", skill: "Experienced", img: "./images/skills/css3-logo.png", shape:"", },
-    { name: "JavaScript", skill: "Experienced", img: "./images/skills/javascript-logo.png", shape:"", },
-    { name: "TailwindCSS", skill: "Experienced", img: "./images/skills/tailwind-css.png", shape:"", },
-    { name: "ReactJS", skill: "Beginner", img: "./images/skills/reactjs-logo.png", shape:"", },
-    { name: "Bootstrap", skill: "Basic", img: "./images/skills/bootstrap.png", shape:"", },
-    { name: "Zustand", skill: "Basic", img: "./images/skills/zustand.png", shape:"", }]
+    { name: "HTML", skill: "Experienced", img: "./images/skills/html5-logo.png", shape:"rounded-4xl hover:rounded-t-none hover:corner-b-bevel", },
+    { name: "CSS", skill: "Experienced", img: "./images/skills/css3-logo.png", shape:"rounded-4xl hover:rounded-t-none hover:corner-b-bevel", },
+    { name: "JavaScript", skill: "Experienced", img: "./images/skills/javascript-logo.png", shape:"hover:corner-b-bevel", },
+    { name: "TailwindCSS", skill: "Experienced", img: "./images/skills/tailwind-css.png", shape:"hover:rounded-none", },
+    { name: "ReactJS", skill: "Beginner", img: "./images/skills/reactjs-logo.png", shape:"hover:corner-b-bevel", },
+    { name: "Bootstrap", skill: "Basic", img: "./images/skills/bootstrap.png", shape:"hover:corner-scoop", },
+    { name: "Zustand", skill: "Basic", img: "./images/skills/zustand.png", shape:"hover:rounded-4xl hover:corner-bevel", }]

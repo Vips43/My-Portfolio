@@ -47,10 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function addProjects() {
 
-  projectsData.forEach((data) => {
+  projectsData?.forEach((data) => {
     const li = document.createElement("li");
     li.className =
-      "project-li reveal w-full max-w-sm backdrop-blur rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300";
+      `project-li reveal w-full max-w-sm backdrop-blur rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300`;
 
     li.style.backgroundColor = data.bgColor;
 
@@ -88,7 +88,7 @@ function addProjects() {
         ? `<a
           href="${data.demo}"
           target="_blank"
-          class="px-4 py-2 text-sm bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+          class="px-4 py-2 text-sm bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition "
         >
           Live Demo
         </a>`
@@ -114,11 +114,10 @@ let skillsGrid = document.getElementById("skillsGrid")
 function skillsRender() {
   skillsGrid.innerHTML = ``
   const fragment = document.createDocumentFragment();
+
   skillData.forEach(data => {
     const div = document.createElement("div");
-    div.classList.add("bg-white/95", "backdrop-blur", "rounded-2xl", "p-5", "w-full", "max-w-[160px]", "flex", "flex-col", "items-center", "gap-3", "shadow-lg", "hover:scale-[1.03]", "hover:shadow-2xl", "transition-all", "duration-300", "reveal", "hover:shadow-2xl",
-      "hover:ring-2",
-      "hover:ring-orange-400/40"
+    div.classList.add("bg-white/95", "backdrop-blur", "rounded-2xl", "p-5", "w-full", "max-w-[160px]", "flex", "flex-col", "items-center", "gap-3", "shadow-lg", "hover:scale-[1.03]", "hover:shadow-2xl", "transition-all", "duration-300", "reveal", "hover:shadow-2xl", "hover:ring-2", "hover:ring-orange-400/40", ...data.shape.split(" ")
     );
 
     div.setAttribute("data-reveal", "");
