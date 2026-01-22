@@ -7,7 +7,8 @@
   <title>Vipul Gehlot — Portfolio (Tailwind)</title>
   <script src="https://kit.fontawesome.com/6c461937ec.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./dist/output.css" />
+  <link rel="stylesheet" href="./src/input.css">
+  <link rel="stylesheet" href="./src/output.css" />
 </head>
 
 <body class="antialiased text-gray-800 bg-brandBg">
@@ -69,7 +70,7 @@
             <h1 class="mt-2 text-3xl md:text-5xl font-semibold text-brandDark leading-tight">
               I'm <span class="block text-accent font-bold">VIPUL GEHLOT</span>
             </h1>
-            <p class="mt-4 text-2xl md:text-3xl font-semibold text-yellow-700">Web Developer</p>
+            <p class="mt-4 text-xl md:text-3xl font-semibold text-yellow-700">Web Developer</p>
 
             <p class="mt-6 text-neutralDec max-w-lg">Welcome to my portfolio — I'm a web developer building
               accessible and responsive experiences. I work with HTML, CSS, Tailwind, JavaScript and
@@ -87,7 +88,7 @@
               <a href="https://www.linkedin.com/in/vipul-gehlot-b06aa0130/" target="_blank" class="text-2xl"
                 aria-label="LinkedIn"><i class="fa-brands fa-square-linkedin"></i></a>
               <a href="https://github.com/Vips43" target="_blank" class="text-2xl" aria-label="GitHub"><i
-                  class="fa-brands fa-github"></i></a>
+                  class="fa-brands fa-github text-black"></i></a>
             </div>
           </div>
 
@@ -104,55 +105,25 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skill" class="bg-gradient-to-br from-white to-slate-50 flex items-center min-h-screen">
+    <section id="skill" class="py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 h-screen">
       <div class="max-w-6xl mx-auto px-4 md:px-6">
-        <div class="text-center mb-8 reveal" data-reveal>
-          <h2 class="text-3xl md:text-4xl font-extrabold">Skills</h2>
-          <p class="mt-3 text-gray-600 max-w-2xl mx-auto">Technologies I've been working with recently.</p>
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white">
+            Skills
+          </h2>
+          <p class="mt-3 text-slate-300 max-w-2xl mx-auto">
+            Technologies I've been working with recently
+          </p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6" id="skillsGrid">
-          <!-- skill card -->
-          <div class="bg-white rounded-xl p-4 flex flex-col items-center gap-3 shadow reveal" data-reveal>
-            <img src="./images/html5-logo.png" alt="HTML5" class="w-20 h-20 object-contain" />
-            <span class="font-semibold">HTML5</span>
-            <small class="text-gray-500">Experienced</small>
-          </div>
-
-          <div class="bg-white rounded-xl p-4 flex flex-col items-center gap-3 shadow reveal" data-reveal>
-            <img src="./images/css3-logo.png" alt="CSS3" class="w-20 h-20 object-contain" />
-            <span class="font-semibold">CSS3</span>
-            <small class="text-gray-500">Experienced</small>
-          </div>
-
-          <div class="bg-white rounded-xl p-4 flex flex-col items-center gap-3 shadow reveal" data-reveal>
-            <img src="./images/javascript-logo.png" alt="JS" class="w-20 h-20 object-contain" />
-            <span class="font-semibold">JavaScript</span>
-            <small class="text-gray-500">Experienced</small>
-          </div>
-
-          <div class="bg-white rounded-xl p-4 flex flex-col items-center gap-3 shadow reveal" data-reveal>
-            <img src="./images/tailwind-css.png" alt="Tailwind" class="w-20 h-20 object-contain" />
-            <span class="font-semibold">Tailwind</span>
-            <small class="text-gray-500">Intermediate</small>
-          </div>
-
-          <div class="bg-white rounded-xl p-4 flex flex-col items-center gap-3 shadow reveal" data-reveal>
-            <img src="./images/reactjs-logo.png" alt="React" class="w-20 h-20 object-contain" />
-            <span class="font-semibold">React</span>
-            <small class="text-gray-500">Intermediate</small>
-          </div>
-
-          <div class="bg-white rounded-xl p-4 flex flex-col items-center gap-3 shadow reveal" data-reveal>
-            <img src="./images/bootstrap.png" alt="Bootstrap" class="w-20 h-20 object-contain" />
-            <span class="font-semibold">Bootstrap</span>
-            <small class="text-gray-500">Basic</small>
-          </div>
-          <div class="bg-white rounded-xl p-4 flex flex-col items-center gap-3 shadow reveal" data-reveal>
-            <img src="./images/zustand.png" alt="Bootstrap" class="w-20 h-20 object-contain" />
-            <span class="font-semibold">Zustand</span>
-            <small class="text-gray-500">Basic</small>
-          </div>
+        <div id="skillsGrid"
+          class="border-8 border-gray-400 p-4 rounded-2xl grid grid-cols-3 sm:grid-cols-4 gap-6 place-items-center">
+          <!-- skill card  (js inject)-->
+           <!-- <div class="bg-white/95 backdrop-blur rounded-2xl p-5 w-full max-w-[160px] flex flex-col items-center gap-3 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal" data-reveal>
+            <img src="./images/skills/html5-logo.png" alt="HTML5" class="w-16 h-16 object-contain" />
+            <span class="font-semibold text-sm text-slate-800">HTML5</span>
+            <small class="text-xs text-slate-500">Experienced</small>
+          </div> -->
 
         </div>
       </div>
@@ -173,13 +144,17 @@
               worked on personal and practice projects across HTML, CSS, JS and React.</p>
 
             <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 *:transition-all duration-500">
-              <div class="relative bg-white text-black rounded-lg p-4 shadow cursor-pointer before flex flex-col items-center">
-                <div class="font-bold flex gap-3 items-center"><i class="fa-solid fa-building-circle-check"></i><span>Experience</span></div>
+              <div
+                class="relative bg-white text-black rounded-lg p-4 shadow cursor-pointer before flex flex-col items-center">
+                <div class="font-bold flex gap-3 items-center"><i
+                    class="fa-solid fa-building-circle-check"></i><span>Experience</span></div>
                 <div class="text-sm mt-1">2 months internship — Plutorooms</div>
               </div>
 
-              <div class="bg-black hover:bg-white text-black rounded-lg p-4 shadow cursor-pointer relative before  flex flex-col items-center">
-                <div class="font-bold flex gap-3 items-center"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></div>
+              <div
+                class="bg-black hover:bg-white text-black rounded-lg p-4 shadow cursor-pointer relative before  flex flex-col items-center">
+                <div class="font-bold flex gap-3 items-center"><i
+                    class="fa-solid fa-graduation-cap"></i><span>Education</span></div>
                 <div class="text-sm mt-1">BCA</div>
               </div>
             </div>
@@ -297,8 +272,6 @@
       </div>
     </section>
 
-
-
     <!-- FOOTER -->
     <footer class="py-6 bg-gray-900 text-gray-200">
       <div class="max-w-6xl mx-auto px-4 md:px-6 text-center">
@@ -306,7 +279,6 @@
       </div>
     </footer>
   </main>
-
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 

@@ -1,4 +1,4 @@
-import { projectsData } from "./data.js";
+import { projectsData, skillData } from "./data.js";
 
 
 // MOBILE MENU
@@ -18,12 +18,14 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-      }else entry.target.classList.remove("show");
-      
+      } else entry.target.classList.remove("show");
+
     });
   },
-  { rootMargin:"-80px",
-    threshold: 0.12 }
+  {
+    rootMargin: "-80px",
+    threshold: 0.12
+  }
 );
 
 document.querySelectorAll("[data-reveal]").forEach((el) => {
@@ -59,42 +61,58 @@ function addProjects() {
 
       <li class="child-li button flex gap-3 justify-center pt-3">
         <button class="px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition">
-          <a href="${data.github}" target="_blank">GitHub</a>
-        </button>
+        <a href="${data.github}" target="_blank">GitHub</a>
+      </button>
 
         ${data.demo !== "not available"
         ? `<button class="px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition">
-                 <a href="${data.demo}" target="_blank">Live Demo</a>
-               </button>`
+            <a href="${data.demo}" target="_blank">Live Demo</a>
+          </button>`
         : `<button disabled class="px-3 py-1 bg-gray-300 border border-black rounded cursor-not-allowed text-gray-600">
-                 No Demo
-               </button>`
+            No Demo
+          </button>`
       }
       </li>
-
     </ul>
   </div>
 `;
-
-
     projectsUl.append(li);
     observer.observe(li);
   });
 }
 
 
+/// skills section
+let skillsGrid = document.getElementById("skillsGrid")
+
+function skillsRender() {
+  skillsGrid.innerHTML = ``
+  const fragment = document.createDocumentFragment();
+  skillData.forEach(data => {
+    const div = document.createElement("div");
+    div.classList.add( "bg-white/95", "backdrop-blur", "rounded-2xl", "p-5", "w-full", "max-w-[160px]", "flex", "flex-col", "items-center", "gap-3", "shadow-lg", "hover:-translate-y-1", "hover:shadow-xl", "transition-all", "duration-300", "reveal");
+    div.setAttribute("data-reveal","");
+    div.innerHTML = `
+      <img src=${data.img} alt=${data.name} class="w-22 h-22 object-contain" />
+      <span class="font-semibold text-sm text-slate-">${data.name}</span>
+      <small class="text-xs text-slate-500">${data.skill}</small>
+    `;
+    fragment.append(div);
+    observer.observe(div)
+  })
+  skillsGrid.replaceChildren(fragment);
+}
+skillsRender()
 
 // contact me 
-
 const form = document.getElementById('contact_form')
 let name = document.getElementById('name'),
   email = document.getElementById('email'),
   msg = document.getElementById('msg')
 
-
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (!name.value&&!email.value&&!msg.value) {
+  if (!name.value && !email.value && !msg.value) {
     return alert('please fill form')
   }
   window.emailjs
