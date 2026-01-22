@@ -93,7 +93,7 @@ function skillsRender() {
     div.classList.add( "bg-white/95", "backdrop-blur", "rounded-2xl", "p-5", "w-full", "max-w-[160px]", "flex", "flex-col", "items-center", "gap-3", "shadow-lg", "hover:-translate-y-1", "hover:shadow-xl", "transition-all", "duration-300", "reveal");
     div.setAttribute("data-reveal","");
     div.innerHTML = `
-      <img src=${data.img} alt=${data.name} class="w-22 h-22 object-contain" />
+      <img src=${data.img} alt=${data.name} class="w-20 h-20 sm:w-22 wm:h-18 object-contain" />
       <span class="font-semibold text-sm text-slate-">${data.name}</span>
       <small class="text-xs text-slate-500">${data.skill}</small>
     `;

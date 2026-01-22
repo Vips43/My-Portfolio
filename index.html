@@ -14,14 +14,14 @@
 <body class="antialiased text-gray-800 bg-brandBg">
 
   <!-- NAVBAR -->
-  <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-200">
+  <header class="fixed inset-x-0 top-0 z-50 bg-[#992263] backdrop-blur-sm border-b border-gray-200">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-6 h-16">
       <div class="flex items-center gap-3">
         <img src="./images/prof-pic1.png" alt="Vipul" class="h-12 w-12 rounded-full object-cover border" />
         <a href="#home" class="text-xl font-semibold">Vipul Gehlot</a>
       </div>
 
-      <nav class="hidden md:block">
+      <nav class="hidden md:block ">
         <ul class="flex items-center gap-6 text-sm font-medium">
           <li><a href="#home" class="hover:text-accent">Home</a></li>
           <li><a href="#skill" class="hover:text-accent">Skills</a></li>
@@ -59,20 +59,20 @@
   </header>
 
   <!-- HERO / HOME -->
-  <main class="pt-20">
-    <section id="home" class="min-h-screen flex items-center">
+  <main class="mt-10">
+    <section id="home" class="min-h-screen bg-[url('../images/background/hero_bg.webp')] bg-cover bg-center bg-no-repeat flex items-center py-8">
       <div class="max-w-6xl mx-auto px-4 md:px-6">
         <div
           class="bg-brandCard border-4 border-orange-100 rounded-3xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 overflow-visible">
           <!-- TEXT -->
           <div class="flex-1 text-center md:text-left reveal" data-reveal>
-            <p class="uppercase tracking-wide text-sm font-extrabold text-black">Hello!</p>
+            <p class="uppercase tracking-wide text-sm font-extrabold text-white">Hello!</p>
             <h1 class="mt-2 text-3xl md:text-5xl font-semibold text-brandDark leading-tight">
-              I'm <span class="block text-accent font-bold">VIPUL GEHLOT</span>
+              I'm <span class="block text-green-700 font-bold">VIPUL GEHLOT</span>
             </h1>
             <p class="mt-4 text-xl md:text-3xl font-semibold text-yellow-700">Web Developer</p>
 
-            <p class="mt-6 text-neutralDec max-w-lg">Welcome to my portfolio — I'm a web developer building
+            <p class="mt-6 text-fuchsia-100 max-w-lg">Welcome to my portfolio — I'm a web developer building
               accessible and responsive experiences. I work with HTML, CSS, Tailwind, JavaScript and
               React.JS. </p>
 
@@ -88,7 +88,7 @@
               <a href="https://www.linkedin.com/in/vipul-gehlot-b06aa0130/" target="_blank" class="text-2xl"
                 aria-label="LinkedIn"><i class="fa-brands fa-square-linkedin"></i></a>
               <a href="https://github.com/Vips43" target="_blank" class="text-2xl" aria-label="GitHub"><i
-                  class="fa-brands fa-github text-black"></i></a>
+                  class="fa-brands fa-github text-black bg-white"></i></a>
             </div>
           </div>
 
@@ -105,9 +105,9 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skill" class="py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 h-screen">
+    <section id="skill" class="py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 h-screen bg-[url('../images/background/skills_bg.webp')] bg-cover bg-center bg-no-repeat">
       <div class="max-w-6xl mx-auto px-4 md:px-6">
-        <div class="text-center mb-12">
+        <div class="text-center mb-2">
           <h2 class="text-3xl md:text-4xl font-extrabold text-white">
             Skills
           </h2>
@@ -117,7 +117,7 @@
         </div>
 
         <div id="skillsGrid"
-          class="border-8 border-gray-400 p-4 rounded-2xl grid grid-cols-3 sm:grid-cols-4 gap-6 place-items-center">
+          class="border-8 border-gray-400 p-4 rounded-2xl grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-5 place-items-center">
           <!-- skill card  (js inject)-->
            <!-- <div class="bg-white/95 backdrop-blur rounded-2xl p-5 w-full max-w-[160px] flex flex-col items-center gap-3 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal" data-reveal>
             <img src="./images/skills/html5-logo.png" alt="HTML5" class="w-16 h-16 object-contain" />
