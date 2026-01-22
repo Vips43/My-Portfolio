@@ -1,6 +1,7 @@
 import { projectsData, skillData } from "./data.js";
 
 
+
 // MOBILE MENU
 const mobileBtn = document.getElementById("mobileBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -35,6 +36,8 @@ document.querySelectorAll("[data-reveal]").forEach((el, i) => {
   el.style.transitionDelay = `${i * 70}ms`;
   observer.observe(el);
 });
+
+
 
 
 // PROJECTS SECTION
@@ -117,8 +120,7 @@ function skillsRender() {
 
   skillData.forEach(data => {
     const div = document.createElement("div");
-    div.classList.add("bg-white/95", "backdrop-blur", "rounded-2xl", "p-5", "w-full", "max-w-[160px]", "flex", "flex-col", "items-center", "gap-3", "shadow-lg", "hover:scale-[1.03]", "hover:shadow-2xl", "transition-all", "duration-300", "reveal", "hover:shadow-2xl", "hover:ring-2", "hover:ring-orange-400/40", ...data.shape.split(" ")
-    );
+    div.classList.add("bg-white/95", "backdrop-blur", "rounded-2xl", "p-5", "w-full", "max-w-[160px]", "flex", "flex-col", "items-center", "gap-3", "shadow-lg", "hover:scale-[1.03]", "hover:shadow-2xl", "transition-all", "duration-300", "reveal", "hover:shadow-2xl", "hover:ring-2", "hover:ring-orange-400/40", ...(data.shape ? data.shape.split(" ") : []));
 
     div.setAttribute("data-reveal", "");
     div.innerHTML = `

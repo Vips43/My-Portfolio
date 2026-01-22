@@ -7,7 +7,6 @@
   <title>Vipul Gehlot — Portfolio (Tailwind)</title>
   <script src="https://kit.fontawesome.com/6c461937ec.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./src/input.css">
   <link rel="stylesheet" href="./src/output.css" />
 </head>
 
@@ -60,7 +59,7 @@
   </header>
 
   <!-- HERO / HOME -->
-  <main class="mt-10">
+  <main class="pt-16">
     <section id="home" class="section min-h-screen  bg-[url('../images/background/profile_bg.jpg')] bg-cover bg-center bg-no-repeat flex items-center py-8">
       <div class="max-w-6xl mx-auto px-4 md:px-6">
         <div
@@ -107,18 +106,20 @@
 
     <!-- SKILLS -->
     <section id="skill" class="section relative py-20 min-h-screen bg-[url('../images/background/skills_bg.webp')] bg-cover bg-center">
-      <div class="max-w-6xl mx-auto px-4 md:px-6 absolute inset-0 bg-slate-900/80">
+      <div class="absolute inset-0 bg-slate-900/80"></div>
+
+      <!-- Real content -->
+      <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
         <div class="text-center mt-5">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-white">
-            Skills
-          </h2>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white">Skills</h2>
           <p class="my-3 text-slate-300 max-w-2xl mx-auto">
             Technologies I've been working with recently
           </p>
         </div>
 
         <div id="skillsGrid"
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center transition-all">
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center">
+
           <!-- skill card  (js inject)-->
           <!-- <div class="bg-white/95 backdrop-blur rounded-2xl p-5 w-full max-w-[160px] flex flex-col items-center gap-3 shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal" data-reveal>
             <img src="./images/skills/html5-logo.png" alt="HTML5" class="w-16 h-16 object-contain" />
@@ -322,6 +323,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
 
   <script>
