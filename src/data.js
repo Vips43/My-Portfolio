@@ -1,60 +1,91 @@
 export const projectsData = [
     {
-        name:'Weather App',
-        desc:"Displays live weather data for cities worldwide using a JavaScript API with dynamic gif backgrounds with css animation.",
-        img:"images/projects/weather-ss.png",
+        name: "Weather App",
+        desc: "Displays live weather data for cities worldwide using a JavaScript API with dynamic GIF backgrounds and CSS animations.",
+        img: "images/projects/weather-ss.png",
+        bgColor:"#30364F",
         github: "https://github.com/Vips43/weather-forcast",
-        demo:"https://weather-forcast-five-gamma.vercel.app/" 
+        demo: "https://weather-forcast-five-gamma.vercel.app/",
+        tech: ["OpenWeather API", "HTML", "CSS", "TailwindCSS", "JavaScript"],
     },
     {
-        name:"Food Website ",
-        desc:"A Food-website using ReactJS resposive design,used api for food fetching data. with hamburger menu.and dark theme",
-        img:"images/projects/food_web.png",
-        github:"https://github.com/Vips43/Food-web.git",
-        demo:"https://food-web-coral-two.vercel.app/",
+        name: "Movie& Streaming Discovery App",
+        desc: "A React-based movie discovery platform using the TMDB API. Features country-based streaming availability, multi-select watch providers, sorting, and global state management with Zustand.",
+        img: "images/projects/TMDB.png", 
+        bgColor:"#30364F",
+        github: "https://github.com/Vips43/TMDB_clone.git", 
+        demo: "https://tmdb-clone-eight.vercel.app/",
+        tech: [ "ReactJS", "TMDB API", "Zustand", "TailwindCSS", "Material UI", "API Integration", ],
     },
     {
-        name:"E-Commerce",
-        desc:"E-Commerce Web App — Built a full-stack shopping website with user authentication, wishlist, cart system, and MongoDB backend using HTML, Tailwind CSS, JavaScript, Node.js, and Express.",
-        img:"images/projects/e-commerce.png",
-        github:"https://github.com/Vips43/E-commerce.git",
-        demo:"not available",
+        name: "Spotify Clone",
+        desc: "Spotify-inspired music app built with ReactJS. Features responsive UI, API-based data fetching, and mobile-friendly design using Tailwind CSS.",
+        img: "images/projects/spotify.png",
+        bgColor:"#40513B",
+        github: "https://github.com/Vips43/spotify-onReactJS.git",
+        demo: "https://spotify-on-react-js.vercel.app/",
+        tech: ["ReactJS", "TailwindCSS", "JavaScript", "API Integration"],
     },
+    {
+        name: "Food Website",
+        desc: "A responsive food website built with ReactJS. Uses an external API to fetch food data, includes a hamburger menu and dark theme support.",
+        img: "images/projects/food_web.png",
+        bgColor:"#ACBAC4",
+        github: "https://github.com/Vips43/Food-web.git",
+        demo: "https://food-web-coral-two.vercel.app/",
+        tech: ["TheMealDB API", "ReactJS", "React Router"],
+    },
+
+    {
+        name: "E-Commerce",
+        desc: "Full-stack e-commerce web app with user authentication, wishlist, cart system, and MongoDB backend using HTML, Tailwind CSS, JavaScript, Node.js, and Express.",
+        img: "images/projects/e-commerce.png",
+        bgColor:"#215E61",
+        github: "https://github.com/Vips43/E-commerce.git",
+        demo: "not available",
+        tech: ["HTML", "TailwindCSS", "JavaScript", "Node.js", "Express", "MongoDB"],
+    },
+
     {
         name: "E-Store",
-        desc: "e-commerce website using build on ReactJS, used dummyjson api to fetch users and products. Used routed to protect user page and product details page only admin can access the users page and if logged in then acccess details page. Used Zustand for state management",
+        desc: "React-based e-commerce app using DummyJSON API. Implemented protected routes, admin-only pages, and global state management using Zustand.",
         img: "images/projects/e-store.png",
+        bgColor:"#215E61",
         github: "https://github.com/Vips43/E-Store.git",
-        demo: "https://e-store-seven-topaz.vercel.app/"
+        demo: "https://e-store-seven-topaz.vercel.app/",
+        tech: ["DummyJSON API", "ReactJS", "TailwindCSS", "Zustand"],
     },
+
+
     {
-        name: "spotify-onReactJS",
-        desc: "Spotify clone built using, ReactJS and used spotify api for data fetching. for UI used tailwindCSS, a better performance and user freindly UI, with mobile freindly resposiveness",
-        img: "images/projects/spotify.png",
-        github: "https://github.com/Vips43/spotify-onReactJS.git",
-        demo: "https://spotify-on-react-js.vercel.app/"
-    },
-    {
-        name: "Qr Generator",
-        desc: "A simple QR Code Generator built with HTML, CSS, and JavaScript that lets you instantly                            create QR codes for any text or link. Just enter your data, generate, and share!",
+        name: "QR Generator",
+        desc: "A simple QR Code Generator built with HTML, CSS, and JavaScript that lets users instantly generate and download QR codes for any text or link.",
         img: "images/projects/qr-generator-ss.png",
+        bgColor:"#5DD3B6",
         github: "https://github.com/Vips43/QR-generator",
-        demo: "https://qr-generator-phi-silk.vercel.app/"
+        demo: "https://qr-generator-phi-silk.vercel.app/",
+        tech: ["HTML", "CSS", "JavaScript"],
     },
+
     {
         name: "Notepad App",
-        desc: 'A lightweight notepad app built with HTML, CSS, and JavaScript that allows users to create,edit, and delete notes directly in the browser. It’s simple, fast, and user-friendly for quick note-taking',
-        img:"images/projects/Notepad-ss.png",
+        desc: "A lightweight notepad app that allows users to create, edit, and delete notes directly in the browser. Simple, fast, and user-friendly.",
+        img: "images/projects/Notepad-ss.png",
+        bgColor:"#5DD3B6",
         github: "https://github.com/Vips43/Notepad-app",
-        demo:"https://notepad-app-ten.vercel.app/"
-    }
-]
+        demo: "https://notepad-app-ten.vercel.app/",
+        tech: ["HTML", "CSS", "JavaScript", "LocalStorage"],
+    },
+
+    // ⭐ NEW — TMDB PROJECT
+];
+
 
 export const skillData = [
-    { name: "HTML", skill: "Experienced", img: "./images/skills/html5-logo.png" },
-    { name: "CSS", skill: "Experienced", img: "./images/skills/css3-logo.png" },
-    { name: "JavaScript", skill: "Experienced", img: "./images/skills/javascript-logo.png" },
-    { name: "TailwindCSS", skill: "Experienced", img: "./images/skills/tailwind-css.png" },
-    { name: "ReactJS", skill: "Beginner", img: "./images/skills/reactjs-logo.png" },
-    { name: "Bootstrap", skill: "Basic", img: "./images/skills/bootstrap.png" },
-    { name: "Zustand", skill: "Basic", img: "./images/skills/zustand.png" }]
+    { name: "HTML", skill: "Experienced", img: "./images/skills/html5-logo.png", shape:"", },
+    { name: "CSS", skill: "Experienced", img: "./images/skills/css3-logo.png", shape:"", },
+    { name: "JavaScript", skill: "Experienced", img: "./images/skills/javascript-logo.png", shape:"", },
+    { name: "TailwindCSS", skill: "Experienced", img: "./images/skills/tailwind-css.png", shape:"", },
+    { name: "ReactJS", skill: "Beginner", img: "./images/skills/reactjs-logo.png", shape:"", },
+    { name: "Bootstrap", skill: "Basic", img: "./images/skills/bootstrap.png", shape:"", },
+    { name: "Zustand", skill: "Basic", img: "./images/skills/zustand.png", shape:"", }]

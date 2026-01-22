@@ -14,30 +14,35 @@ if (mobileBtn) {
 
 // INTERSECTION OBSERVER
 const observer = new IntersectionObserver(
-  (entries) => {
+  (entries, obs) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else entry.target.classList.remove("show");
+      if (!entry.isIntersecting) return;
 
+      entry.target.classList.add("show");
+      obs.unobserve(entry.target);
     });
   },
   {
-    rootMargin: "-80px",
-    threshold: 0.12
+    root: null,
+    rootMargin: "0px 0px -100px 0px",
+    threshold: 0.15,
   }
 );
 
-document.querySelectorAll("[data-reveal]").forEach((el) => {
+
+document.querySelectorAll("[data-reveal]").forEach((el, i) => {
   el.classList.add("reveal");
+  el.style.transitionDelay = `${i * 70}ms`;
   observer.observe(el);
 });
+
 
 // PROJECTS SECTION
 let projectsUl = document.getElementById("projects-ul");
 
 document.addEventListener("DOMContentLoaded", () => {
   addProjects();
+  skillsRender()
 });
 
 function addProjects() {
@@ -45,37 +50,58 @@ function addProjects() {
   projectsData.forEach((data) => {
     const li = document.createElement("li");
     li.className =
-      "project-li reveal max-w-1/2 bg-white border border-black rounded-xl p-4 text-black transition-all";
+      "project-li reveal w-full max-w-sm backdrop-blur rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300";
+
+    li.style.backgroundColor = data.bgColor;
 
     li.innerHTML = `
-  <span class="block text-center font-bold mb-2">${data.name}</span>
+ <!-- Project Image -->
+ <div class="h-48 bg-black flex items-center justify-center overflow-hidden transition-all">
+  <img
+   src="${data.img}"
+   alt="${data.name}"
+   class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+  />
+ </div>
 
-  <div class="expand-wrapper relative overflow-hidden">
-    <ul class="child-ul max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-      
-      <li class="child-li py-2 text-sm text-gray-700">${data.desc}</li>
+ <!-- Card Content -->
+ <div class="p-5">
+  <h3 class="text-lg font-bold mb-2 text-white text-center hover:underline cursor-pointer">
+   ${data.name}
+  </h3>
 
-      <li class="child-li img pt-2 w-full">
-        <img src="${data.img}" alt="${data.name}" class="w-[80%] mx-auto object-contain rounded-full hover:scale-110 hover:rounded-none " />
-      </li>
+  <p class="text-sm text-slate-300 text-center hover:text-black line-clamp-3 transition-all">
+   ${data.desc}
+  </p>
 
-      <li class="child-li button flex gap-3 justify-center pt-3">
-        <button class="px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition">
-        <a href="${data.github}" target="_blank">GitHub</a>
-      </button>
+  <!-- Buttons -->
+  <div class="flex gap-3 justify-center mt-5">
+   <a
+    href="${data.github}"
+    target="_blank"
+    class="px-4 py-2 text-sm border border-white/30 rounded-lg hover:bg-white hover:text-black transition"
+   >
+    GitHub
+   </a>
 
-        ${data.demo !== "not available"
-        ? `<button class="px-3 py-1 border border-black rounded hover:bg-black hover:text-white transition">
-            <a href="${data.demo}" target="_blank">Live Demo</a>
-          </button>`
-        : `<button disabled class="px-3 py-1 bg-gray-300 border border-black rounded cursor-not-allowed text-gray-600">
-            No Demo
-          </button>`
+   ${data.demo !== "not available"
+        ? `<a
+          href="${data.demo}"
+          target="_blank"
+          class="px-4 py-2 text-sm bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+        >
+          Live Demo
+        </a>`
+        : `<span
+          class="px-4 py-2 text-sm bg-gray-600/50 text-gray-300 rounded-lg cursor-not-allowed"
+        >
+          No Demo
+        </span>`
       }
-      </li>
-    </ul>
   </div>
+ </div>
 `;
+
     projectsUl.append(li);
     observer.observe(li);
   });
@@ -90,8 +116,12 @@ function skillsRender() {
   const fragment = document.createDocumentFragment();
   skillData.forEach(data => {
     const div = document.createElement("div");
-    div.classList.add( "bg-white/95", "backdrop-blur", "rounded-2xl", "p-5", "w-full", "max-w-[160px]", "flex", "flex-col", "items-center", "gap-3", "shadow-lg", "hover:-translate-y-1", "hover:shadow-xl", "transition-all", "duration-300", "reveal");
-    div.setAttribute("data-reveal","");
+    div.classList.add("bg-white/95", "backdrop-blur", "rounded-2xl", "p-5", "w-full", "max-w-[160px]", "flex", "flex-col", "items-center", "gap-3", "shadow-lg", "hover:scale-[1.03]", "hover:shadow-2xl", "transition-all", "duration-300", "reveal", "hover:shadow-2xl",
+      "hover:ring-2",
+      "hover:ring-orange-400/40"
+    );
+
+    div.setAttribute("data-reveal", "");
     div.innerHTML = `
       <img src=${data.img} alt=${data.name} class="w-20 h-20 sm:w-22 wm:h-18 object-contain" />
       <span class="font-semibold text-sm text-slate-">${data.name}</span>
@@ -102,7 +132,7 @@ function skillsRender() {
   })
   skillsGrid.replaceChildren(fragment);
 }
-skillsRender()
+
 
 // contact me 
 const form = document.getElementById('contact_form')
