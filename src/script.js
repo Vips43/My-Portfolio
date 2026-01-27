@@ -37,9 +37,6 @@ document.querySelectorAll("[data-reveal]").forEach((el, i) => {
   observer.observe(el);
 });
 
-
-
-
 // PROJECTS SECTION
 let projectsUl = document.getElementById("projects-ul");
 
@@ -53,7 +50,7 @@ function addProjects() {
   projectsData?.forEach((data) => {
     const li = document.createElement("li");
     li.className =
-      `project-li reveal w-full max-w-sm backdrop-blur rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300`;
+      `project-li reveal w-full max-w-sm backdrop-blur rounded-2xl overflow-hidden shadow-lg border border-white/10 hover:shadow-lg  hover:shadow-gray-600 transition-all duration-300`;
 
     li.style.backgroundColor = data.bgColor;
 
@@ -91,7 +88,7 @@ function addProjects() {
         ? `<a
           href="${data.demo}"
           target="_blank"
-          class="px-4 py-2 text-sm bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition "
+          class="px-4 py-2 text-sm bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all "
         >
           Live Demo
         </a>`
