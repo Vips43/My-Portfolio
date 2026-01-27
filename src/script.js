@@ -6,11 +6,32 @@ import { projectsData, skillData } from "./data.js";
 const mobileBtn = document.getElementById("mobileBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
-if (mobileBtn) {
-  mobileBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-}
+
+let active = true;
+mobileBtn.addEventListener("click", () => {
+  if (active) {
+    mobileMenu.classList.remove('opacity-0', '-translate-y-2', 'pointer-events-none');
+    mobileMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+    active = false
+  } else {
+    mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+    mobileMenu.classList.add('opacity-0', '-translate-y-2', 'pointer-events-none');
+    active = true
+  }
+});
+
+document.addEventListener("click", (e) => {
+  const isClickInsideBtn = mobileBtn.contains(e.target);
+  const isClickInsideMenu = mobileMenu.contains(e.target);
+  if (!isClickInsideBtn && !isClickInsideMenu && !active) {
+
+    mobileMenu.classList.remove("max-h-[1000px]", "opacity-100");
+    mobileMenu.classList.add("max-h-0", "opacity-0");
+
+    active = true;
+  }
+})
+
 
 
 // INTERSECTION OBSERVER
