@@ -30,12 +30,12 @@ export const projectsData = [
     },
     {
         name: "Food Website",
-        desc: "A responsive food website built with ReactJS. Uses an external API to fetch food data, includes a hamburger menu and dark theme support.",
+        desc: "A responsive food website built with Html Tailwind css and Javascript. Uses an external theMealDB API to fetch food data, includes a hamburger menu and dark theme support with Tailwindcss.",
         img: "images/projects/food_web.png",
         bgColor:"#ACBAC4",
         github: "https://github.com/Vips43/Food-web.git",
-        demo: "https://food-web-coral-two.vercel.app/",
-        tech: ["TheMealDB API", "ReactJS", "React Router"],
+        demo: "https://food-site-livid-kappa.vercel.app/",
+        tech: ["TheMealDB API", "TailwindCss", "Javascript","framer motion"],
     },
 
     {
